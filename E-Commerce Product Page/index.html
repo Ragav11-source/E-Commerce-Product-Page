@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartShop | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛒 SmartShop</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="products">
+      <div class="product" data-id="1">
+        <img src="images/watch.jpg" alt="Smart Watch">
+        <h3>Analog Watch</h3>
+        <p>₹1,999</p>
+        <button onclick="viewDetails(1)">View Details</button>
+        <button onclick="addToCart(1)">Add to Cart</button>
+      </div>
+
+      <div class="product" data-id="2">
+        <img src="images/headphones.jpg" alt="Headphones">
+        <h3>Wireless Headphones</h3>
+        <p>₹1,499</p>
+        <button onclick="viewDetails(2)">View Details</button>
+        <button onclick="addToCart(2)">Add to Cart</button>
+      </div>
+
+      <div class="product" data-id="3">
+        <img src="images/shoes.jpg" alt="Shoes">
+        <h3>Sports Shoes</h3>
+        <p>₹2,499</p>
+        <button onclick="viewDetails(3)">View Details</button>
+        <button onclick="addToCart(3)">Add to Cart</button>
+      </div>
+
+      <div class="product" data-id="4">
+        <img src="images/smartphone.jpg" alt="Smartphone">
+        <h3>Smartphone</h3>
+        <p>₹10,999</p>
+        <button onclick="viewDetails(4)">View Details</button>
+        <button onclick="addToCart(4)">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="">
+      <h2 id="modal-title"></h2>
+      <p id="modal-price"></p>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 SmartShop</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
